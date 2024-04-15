@@ -12,7 +12,18 @@ note: We want child class object must be followed as base class object architect
 use abstract...
 */
 
-abstract class Player(){
+interface VolumeManager{
+    fun increase(){
+        println("volume is increase")
+    }
+    fun decrease(){
+        println("volume is decrease")
+    }
+}
+// Interface Similar to abstract you can declare and child class must be initialized it....
+// But, In Interface  you can declare function and also initialized that function
+
+abstract class Player(): VolumeManager{
     abstract fun play()
     abstract fun pause()
     abstract fun stop()
@@ -64,6 +75,8 @@ fun main(){
     player?.let {
         it.play()
         it.pause()
+        it.increase()
+        it.decrease()
         it.stop()
     }
 
