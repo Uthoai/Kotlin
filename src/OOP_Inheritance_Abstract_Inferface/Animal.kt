@@ -1,8 +1,10 @@
+package OOP_Inheritance_Abstract_Inferface
+
 interface Roamable {
     fun roam()
 }
 
-class Vehicle: Roamable{
+class Vehicle: Roamable {
     override fun roam() {
         println("The Vehicle is roaming.")
     }
@@ -81,7 +83,7 @@ class Vet{
 }
 
 fun main(){
-    val animals = arrayOf(Hippo(),Wolf())
+    val animals = arrayOf(Hippo(), Wolf())
     for (item in animals){
         item.roam()
         item.eat()
@@ -94,7 +96,7 @@ fun main(){
 
     println()
 
-    val roamables = arrayOf(Hippo(),Wolf(),Vehicle())
+    val roamables = arrayOf(Hippo(), Wolf(), Vehicle())
     for (item in roamables){
         item.roam()
         if (item is Animal){
