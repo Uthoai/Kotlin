@@ -21,7 +21,7 @@ class LocalPlayer: Player(){
     override fun play() {
         println("Local Music is playing...")
     }
-    fun getLocalData(){
+    private fun getLocalData(){
         println("get data from local...")
     }
     override fun pause() {
@@ -36,7 +36,7 @@ class RemotePlayer: Player(){
     override fun play() {
         println("Remote Music is playing...")
     }
-    fun getAPIData(){
+    private fun getAPIData(){
         println("getting data from api...")
     }
     override fun pause() {
